@@ -29,7 +29,7 @@ public class RotatedArray {
             if(startIndex == midIndex){
                 return (nums[startIndex] > nums[endIndex]) ? startIndex : endIndex; 
             }
-            else if(nums[midIndex] <= nums[startIndex]){
+            else if(nums[midIndex] < nums[startIndex]){
                 // this means that we are in the right part of the rotated array
                 // it implies that the pivot could be start and mid - 1
                 endIndex = midIndex - 1; 
@@ -54,9 +54,7 @@ public class RotatedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,3}; 
-        int target = 2; 
-        System.out.println(getPivot(nums));
+        int[] nums = {5, 5, 5, 5, 7, 0}; 
         
     }
 }
